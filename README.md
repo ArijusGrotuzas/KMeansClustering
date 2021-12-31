@@ -3,7 +3,7 @@ K-Means clustering implemented in `C++`.
 
 # Tabel of contents
 - [Testing on Old Faithful dataset](#Old-faithful-test)
-- [Plane intersection](#Image-compression)
+- [Image Compression](#Image-compression)
 
 ## Old Faithful test
 The algorithm was tested on the [Old Faithful](https://gist.github.com/curran/4b59d1046d9e66f2787780ad51a1cd87) dataset, by running the algorithm for 10 epochs and setting `k = 2`.
