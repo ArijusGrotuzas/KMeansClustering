@@ -14,7 +14,7 @@ The green stars show the cluster means after 10 epochs.
 
 ## Image compression
 
-The image compression is achieved by clustering all pixel values of the image with K-Means clustering, and expressing each pixel's value as the mean of the cluster it is assigned to. Different `k` values show different degrees of compression.
+The image compression is achieved by clustering all pixel values of the image with K-Means clustering, and expressing each pixel's value as the mean of the cluster it is assigned to. Different `k` values give different degrees of compression.
 
 | `k=3` | `k=10` | `k=20` |
 | - | - | - |
