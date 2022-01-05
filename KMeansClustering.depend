@@ -1,7 +1,10 @@
 # depslib dependency file v1.0
-1640850294 source:c:\users\tamst\documents\kmeansclustering\main.cpp
+1641401270 source:c:\users\tamst\documents\kmeansclustering\main.cpp
 	<bits/stdc++.h>
 	<dataset.h>
+	<KMeans.h>
 
-1640801062 c:\users\tamst\documents\kmeansclustering\include\dataset.h
+1641400878 c:\users\tamst\documents\kmeansclustering\include\dataset.h
+
+1641400912 c:\users\tamst\documents\kmeansclustering\include\kmeans.h
 

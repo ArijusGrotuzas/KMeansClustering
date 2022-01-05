@@ -5,11 +5,12 @@ using namespace std;
 
 struct point{
     vector<double> features;
-    int label;
+    int label, entry;
     double distance;
 
     point() :
         label(0),
+        entry(0),
         distance (__DBL_MAX__) {}
 };
 
@@ -30,7 +31,7 @@ class dataset
 
         inline int getLenght();
 
-        inline vector<point> getData();
+        inline vector<point>* getData();
 };
 
 dataset::dataset(string filename, bool readClassValues=true){
@@ -72,9 +73,11 @@ inline void dataset::readDataset()
             point p;
 
             // Add columns to a point structure
-            for(int i = 0; i < row.size(); i++){
+            for(int i = 0; i < int(row.size()); i++){
                 p.features.push_back(stod(row[i]));
             }
+
+            p.entry = num;
 
             data.push_back(p);
             num++;
@@ -95,7 +98,7 @@ inline void dataset::printDataset(int rows){
     for (int i = 0; i < rows; i++){
         vector<double> temp = data[i].features;
 
-        for(int j = 0; j < temp.size(); j++){
+        for(int j = 0; j < int(temp.size()); j++){
             cout << temp[j] << ", ";
         }
 
@@ -114,9 +117,9 @@ inline int dataset::getLenght(){
     return lenght;
 };
 
-inline vector<point> dataset::getData(){
+inline vector<point>* dataset::getData(){
 
-    return data;
+    return &data;
 };
 
 #endif // DATASET_H
