@@ -1,7 +1,7 @@
 # K-Means Clustering
 K-Means clustering implemented in `C++`.
 
-# Tabel of contents
+## Tabel of contents
 - [Testing on Old Faithful dataset](#Old-faithful-test)
 - [Image Compression](#Image-compression)
 
