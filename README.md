@@ -3,7 +3,7 @@ K-Means clustering implemented in `C++`.
 
 ## Tabel of contents
 - [Testing on Old Faithful dataset](#Old-faithful-test)
-- [Image Compression](#Image-compression)
+- [Image Segmentation](#Image-segmentation)
 
 ## Old Faithful test
 The algorithm was tested on the [Old Faithful](https://gist.github.com/curran/4b59d1046d9e66f2787780ad51a1cd87) dataset, by running the algorithm for 10 epochs and setting `k = 2`.
@@ -12,7 +12,7 @@ The algorithm was tested on the [Old Faithful](https://gist.github.com/curran/4b
 
 The green stars show the cluster means after 10 epochs.
 
-## Image compression
+## Image segmentation
 
 The image compression is achieved by clustering all pixel values of the image with K-Means clustering, and expressing each pixel's value as the mean of the cluster it is assigned to. Different `k` values give different degrees of compression.
 
