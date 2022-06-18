@@ -34,6 +34,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/KMeans.h" />
 		<Unit filename="include/dataset.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>

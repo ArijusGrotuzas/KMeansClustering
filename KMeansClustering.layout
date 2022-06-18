@@ -2,31 +2,35 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\dataset.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1857" topLine="0" />
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 		<Folding>
-			<Collapse line="3" />
-			<Collapse line="15" />
-			<Collapse line="19" />
-			<Collapse line="39" />
-			<Collapse line="53" />
-			<Collapse line="74" />
-			<Collapse line="83" />
+			<Collapse line="17" />
+			<Collapse line="36" />
+			<Collapse line="43" />
+			<Collapse line="91" />
+			<Collapse line="115" />
+			<Collapse line="119" />
 		</Folding>
 	</File>
-	<File name="include\dataset.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\KMeans.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="212" topLine="0" />
+			<Cursor1 position="2289" topLine="34" />
 		</Cursor>
 		<Folding>
-			<Collapse line="16" />
-			<Collapse line="35" />
-			<Collapse line="42" />
-			<Collapse line="88" />
-			<Collapse line="112" />
-			<Collapse line="116" />
+			<Collapse line="5" />
+			<Collapse line="17" />
+			<Collapse line="25" />
+			<Collapse line="34" />
+			<Collapse line="68" />
+			<Collapse line="115" />
 		</Folding>
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="619" topLine="0" />
+		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

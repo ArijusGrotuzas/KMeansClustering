@@ -37,7 +37,7 @@ double EuclideanDistance(vector<double> a, vector<double> b){
         double squaredDist = 0.0;
 
         for(int i = 0; i < int(a.size()); i++){
-            squaredDist += (a[i] - b[i]) * (a[i] - b[i]);
+            squaredDist += pow(a[i] - b[i], 2);
         }
         return sqrt(squaredDist);
     }
@@ -189,6 +189,14 @@ void KMeansClustering(vector<point>* data, int k = 2, int epochs = 10, string fi
 
         // Reset the distances of the points
         resetDistance(data);
+    }
+
+    // Print all the means
+    for (auto i : centroids){
+        for (auto j : i.features){
+            cout << j << ", ";
+        }
+        cout << endl;
     }
 
     if(writeImage){

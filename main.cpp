@@ -5,8 +5,8 @@
 int main()
 {
     // Specify input and output file names
-    string trainFilename = "dog.csv";
-    string outputFilename = "output.ppm";
+    string trainFilename = "data/iris.csv";
+    string outputFilename = "data/output.csv";
 
     // Create dataset object and specify the file to read
     dataset train(trainFilename);
@@ -22,5 +22,5 @@ int main()
     train.printDataset(10);
 
     // Perform K-Means Clustering on the data
-    KMeansClustering(train.getData(), 2, 10, outputFilename, true);
+    KMeansClustering(train.getData(), 3, 10, outputFilename);
 }
