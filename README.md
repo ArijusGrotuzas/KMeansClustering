@@ -14,7 +14,7 @@ The algorithm was tested on the [Old Faithful](https://gist.github.com/curran/4b
 The green stars show the cluster means after 10 epochs.
 
 ## Iris dataset
-The algorithm was tested on the [Iris](https://gist.github.com/curran/4b59d1046d9e66f2787780ad51a1cd87) dataset, consisting of 50 samples from each of three species of Iris (Iris Setosa, Iris virginica, and Iris versicolor). Four features are measured for each sample. However, only the first three features are used for classification, thus `k = 3`. The algorithm was executed for 10 epochs.
+The algorithm was tested on the [Iris](https://www.kaggle.com/datasets/arshid/iris-flower-dataset) dataset, consisting of 50 samples from each of three species of Iris (Iris Setosa, Iris virginica, and Iris versicolor). Four features are measured for each sample. However, only the first three features are used for classification, thus `k = 3`. The algorithm was executed for 10 epochs.
 
 ![iris-3d](https://user-images.githubusercontent.com/50104866/174447457-67512d3c-f703-4fe3-aa87-fac46c458268.png)
 
