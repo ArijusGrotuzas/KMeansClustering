@@ -1,7 +1,7 @@
 # K-Means Clustering
 K-Means clustering implemented in `C++`. Based on C. M. Bishop's book [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) (2006).
 
-## Tabel of contents
+## Table of contents
 - [Testing on Old Faithful dataset](#Old-faithful-dataset)
 - [Testing on Iris dataset](#Iris-dataset)
 - [Image Segmentation](#Image-segmentation)
