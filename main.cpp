@@ -1,6 +1,7 @@
-#include <bits/stdc++.h>
-#include <dataset.h>
+#include <stdlib.h>
 #include <KMeans.h>
+
+using namespace std;
 
 int main()
 {
@@ -9,7 +10,7 @@ int main()
     string outputFilename = "data/output.csv";
 
     // Create dataset object and specify the file to read
-    dataset train(trainFilename);
+    dataHolder train(trainFilename, true);
 
     // Read the dataset
     train.readDataset();
@@ -22,5 +23,6 @@ int main()
     train.printDataset(10);
 
     // Perform K-Means Clustering on the data
-    KMeansClustering(train.getData(), 3, 10, outputFilename);
+    KMeans km;
+    km.KMeansClustering(train.getData(), 3, 10, outputFilename, false);
 }

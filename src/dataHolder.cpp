@@ -1,46 +1,14 @@
-#ifndef DATASET_H
-#define DATASET_H
+#include "dataHolder.h"
 
 using namespace std;
 
-struct point{
-    vector<double> features;
-    int label, entry;
-    double distance;
-
-    point() :
-        label(0),
-        entry(0),
-        distance (__DBL_MAX__) {}
-};
-
-class dataset
-{
-    private:
-        string filename;
-        int lenght;
-        bool readClassValues;
-        vector<point> data;
-
-    public:
-        dataset(string filename, bool readClassValues);
-
-        inline void readDataset();
-
-        inline void printDataset(int rows);
-
-        inline int getLenght();
-
-        inline vector<point>* getData();
-};
-
-dataset::dataset(string filename, bool readClassValues=true){
+dataHolder::dataHolder(std::string filename, bool readClassValues){
     this->filename = filename;
     this->readClassValues = readClassValues;
     lenght = 0;
 }
 
-inline void dataset::readDataset()
+void dataHolder::readDataset()
 {
     // File pointer
     fstream file;
@@ -89,7 +57,7 @@ inline void dataset::readDataset()
     }
 }
 
-inline void dataset::printDataset(int rows){
+void dataHolder::printDataset(int rows){
 
     if(rows > lenght){
         rows = lenght;
@@ -113,13 +81,10 @@ inline void dataset::printDataset(int rows){
     cout << endl;
 }
 
-inline int dataset::getLenght(){
+int dataHolder::getLenght(){
     return lenght;
 };
 
-inline vector<point>* dataset::getData(){
-
+vector<point>* dataHolder::getData(){
     return &data;
 };
-
-#endif // DATASET_H
