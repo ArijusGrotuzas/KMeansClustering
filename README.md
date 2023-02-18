@@ -2,9 +2,26 @@
 K-Means clustering implemented in `C++`. Based on C. M. Bishop's book [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) (2006).
 
 ## Table of contents
-- [Testing on Old Faithful dataset](#Old-faithful-dataset)
-- [Testing on Iris dataset](#Iris-dataset)
-- [Image Segmentation](#Image-segmentation)
+- [K-Means Clustering](#k-means-clustering)
+  - [Table of contents](#table-of-contents)
+  - [Usage](#usage)
+  - [Old Faithful dataset](#old-faithful-dataset)
+  - [Iris dataset](#iris-dataset)
+  - [Image segmentation](#image-segmentation)
+
+## Usage
+
+```bash
+
+$ Kmeans --train_file <> --output_file <> 
+
+```
+
+```bash
+
+$ Kmeans --train_file <> --output_file <> --epochs <> --means <> 
+
+```
 
 ## Old Faithful dataset
 The algorithm was tested on the [Old Faithful](https://gist.github.com/curran/4b59d1046d9e66f2787780ad51a1cd87) dataset, by running the algorithm for 10 epochs and setting `k = 2`.
