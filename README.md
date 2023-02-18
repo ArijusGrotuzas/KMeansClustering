@@ -14,6 +14,7 @@ K-Means clustering implemented in `C++`. Based on C. M. Bishop's book [Pattern R
 $ Kmeans --train_file <training dataset filename> --output_file <output filename> 
 
 ```
+### Optional arguments
 
 ```bash
 
