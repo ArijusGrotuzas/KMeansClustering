@@ -77,15 +77,17 @@ void KMeans::assignCluster(vector<point>* data, vector<point>* clusters){
 void KMeans::writeToFile(vector<point>* data, string filename){
 
     // Create a csv file into which we can write
-    std::fstream file;
-    file.open(filename, std::ios::out);
+    fstream file;
+    file.open(filename, ios::out);
 
     // Check if file was created successfully
     if(!file)
     {
-        std::cout << "Error, creating a file...";
+        printf("Error, creating a file...");
         return;
     }
+
+    printf("Writing to file: %s \n", filename.c_str());
 
     // Iterate over all data points and write them to an output file
     for (vector<point>::iterator i = data->begin(); i != data->end(); ++i){
@@ -178,13 +180,14 @@ void KMeans::KMeansClustering(vector<point>* data, int k, int epochs, string fil
         resetDistance(data);
     }
 
-    // Print all the means
+    printf("The resulting %i means: \n", k);
     for (auto i : centroids){
         for (auto j : i.features){
             cout << j << ", ";
         }
-        cout << endl;
+        printf("\n");
     }
+    printf("\n");
 
     if(writeImage){
         writeToImage(data, &centroids, filename);

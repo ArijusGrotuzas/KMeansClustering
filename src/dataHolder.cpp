@@ -16,6 +16,8 @@ void dataHolder::readDataset()
     // Open an existing file
     file.open(filename, ios::in);
 
+    printf("Opening a file: %s; \n", filename.c_str());
+
     // Check if the file is still open
     if (file.is_open())
     {
