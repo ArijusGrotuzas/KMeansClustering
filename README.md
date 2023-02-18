@@ -2,8 +2,6 @@
 K-Means clustering implemented in `C++`. Based on C. M. Bishop's book [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) (2006).
 
 ## Table of contents
-- [K-Means Clustering](#k-means-clustering)
-  - [Table of contents](#table-of-contents)
   - [Usage](#usage)
   - [Old Faithful dataset](#old-faithful-dataset)
   - [Iris dataset](#iris-dataset)
@@ -13,13 +11,13 @@ K-Means clustering implemented in `C++`. Based on C. M. Bishop's book [Pattern R
 
 ```bash
 
-$ Kmeans --train_file <> --output_file <> 
+$ Kmeans --train_file <training dataset filename> --output_file <output filename> 
 
 ```
 
 ```bash
 
-$ Kmeans --train_file <> --output_file <> --epochs <> --means <> 
+$ Kmeans --train_file <training dataset filename> --output_file <output filename> --epochs <number of epochs> --means <number of clusters> 
 
 ```
 
