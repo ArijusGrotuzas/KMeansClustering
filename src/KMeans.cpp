@@ -2,16 +2,34 @@
 
 using namespace std;
 
-bool KMeans::compareLabel(point a, point b){
+/**
+ * Compares two <point> structs based on their label value
+ * 
+ * @param a First point
+ * @param b Second point
+ * @return True if (a.label < b.label); otherwise False
+ */
+inline bool KMeans::compareLabel(point a, point b){
     return (a.label < b.label);
 }
 
-bool KMeans::compareEntry(point a, point b){
+/**
+ * Compares two <point> structs based on their entry value
+ * 
+ * @param a First point
+ * @param b Second point
+ * @return True if (a.entry < b.entry); otherwise False
+ */
+inline bool KMeans::compareEntry(point a, point b){
     return (a.entry < b.entry);
 }
 
+/**
+ * Resets distance field for a set of <point> structs
+ * 
+ * @param data A set of <point>
+ */
 void KMeans::resetDistance(vector<point>* data){
-
     for (vector<point>::iterator i = data->begin(); i != data->end(); ++i){
         point p = *i;
         p.distance = __DBL_MAX__;
@@ -19,6 +37,13 @@ void KMeans::resetDistance(vector<point>* data){
     }
 }
 
+/**
+ * Computes an n-dimensional Euclidean distance between two vectors
+ * 
+ * @param a First vector
+ * @param b Second vector
+ * @return Euclidean distance between `a` and `b`
+ */
 double KMeans::EuclideanDistance(vector<double> a, vector<double> b){
     if (a.size() == b.size()){
         double squaredDist = 0.0;
@@ -33,6 +58,13 @@ double KMeans::EuclideanDistance(vector<double> a, vector<double> b){
     }
 }
 
+/**
+ * Computes a mean vector given a set of n-dimensional points
+ * 
+ * @param points Set of points to average
+ * @param bound Bounds within which to average the points
+ * @return Mean vector
+ */
 vector<double> KMeans::meanVector(vector<point>* points, boundaries bound){
     vector<double> temp = points->at(0).features;
     vector<double> mean(temp.size(), 0.0);
@@ -53,6 +85,12 @@ vector<double> KMeans::meanVector(vector<point>* points, boundaries bound){
     return mean;
 }
 
+/**
+ * Assigns a cluster to each point in data based on Euclidean distance
+ * 
+ * @param data A set of points to cluster
+ * @param clusters A set of clusters
+ */
 void KMeans::assignCluster(vector<point>* data, vector<point>* clusters){
 
     for (vector<point>::iterator i = clusters->begin(); i != clusters->end(); ++i){
@@ -74,6 +112,10 @@ void KMeans::assignCluster(vector<point>* data, vector<point>* clusters){
     }
 }
 
+/**
+ * @param data
+ * @param filename
+ */
 void KMeans::writeToFile(vector<point>* data, string filename){
 
     // Create a csv file into which we can write
@@ -102,16 +144,21 @@ void KMeans::writeToFile(vector<point>* data, string filename){
     }
 }
 
+/**
+ * @param data
+ * @param centroids
+ * @param filename
+*/
 void KMeans::writeToImage(vector<point>* data, vector<point>* centroids, string filename){
 
     // Create a ppm file into which we can write
-    std::fstream file;
-    file.open(filename, std::ios::out);
+    fstream file;
+    file.open(filename, ios::out);
 
     // Check if file was created successfully
     if(!file)
     {
-        std::cout << "Error, creating a file...";
+        cout << "Error, creating a file...";
         return;
     }
 
@@ -137,6 +184,15 @@ void KMeans::writeToImage(vector<point>* data, vector<point>* centroids, string 
 
 };
 
+/**
+ * Computes K-Means clustering on a set of data.
+ *
+ * @param data Data to be clustered
+ * @param k Number of Clusters
+ * @param epochs Number of epochs to train for
+ * @param filename Output filename to which the clustered data will be written to
+ * @param writeImage *Blank*
+ */
 void KMeans::KMeansClustering(vector<point>* data, int k, int epochs, string filename, bool writeImage){
     vector<point> centroids;
     srand(time(0));

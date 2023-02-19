@@ -20,10 +20,9 @@ void performKMeans(string & trainFilename, string & outputFilename, int & means,
 
     train.readDataset();
 
-    printf("Number of instances: %i. \n\n", train.getLenght());
+    printf("Number of instances: %i. \n\n", train.getLength());
 
-    KMeans km;
-    km.KMeansClustering(train.getData(), means, epochs, outputFilename, false);
+    KMeans::KMeansClustering(train.getData(), means, epochs, outputFilename, false);
 }
 
 int main(int argc, char *argv[])

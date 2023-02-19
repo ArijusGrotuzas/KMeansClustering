@@ -5,7 +5,7 @@ using namespace std;
 dataHolder::dataHolder(std::string filename, bool readClassValues){
     this->filename = filename;
     this->readClassValues = readClassValues;
-    lenght = 0;
+    length = 0;
 }
 
 void dataHolder::readDataset()
@@ -55,14 +55,14 @@ void dataHolder::readDataset()
 
         // Close the file
         file.close();
-        lenght = num;
+        length = num;
     }
 }
 
 void dataHolder::printDataset(int rows){
 
-    if(rows > lenght){
-        rows = lenght;
+    if(rows > length){
+        rows = length;
     }
 
     for (int i = 0; i < rows; i++){
@@ -83,8 +83,8 @@ void dataHolder::printDataset(int rows){
     cout << endl;
 }
 
-int dataHolder::getLenght(){
-    return lenght;
+int dataHolder::getLength(){
+    return length;
 };
 
 vector<point>* dataHolder::getData(){

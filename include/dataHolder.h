@@ -18,7 +18,7 @@ class dataHolder
 {
     private:
         std::string filename;
-        int lenght;
+        int length;
         bool readClassValues;
         std::vector<point> data;
 
@@ -29,7 +29,7 @@ class dataHolder
 
         void printDataset(int rows);
 
-        int getLenght();
+        int getLength();
 
         std::vector<point>* getData();
 };
