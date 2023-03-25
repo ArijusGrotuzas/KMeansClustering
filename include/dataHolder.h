@@ -29,9 +29,9 @@ class dataHolder
 
         void printDataset(int rows);
 
-        int getLength();
+        inline int getLength();
 
-        std::vector<point>* getData();
+        inline std::vector<point>* getData();
 };
 
 #endif // DATASET_H
