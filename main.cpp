@@ -34,6 +34,8 @@ int main(int argc, char *argv[])
     int input_flag = 0;
     int output_flag = 0;
 
+    // fff
+
     const char* const short_opts = "t:o:m:e:h";
     const option long_opts[] = {
             {"train_file", required_argument, nullptr, 't'},
